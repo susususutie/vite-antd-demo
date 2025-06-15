@@ -1,6 +1,7 @@
-import { Form, Input, Button, Checkbox } from 'antd'
+import { Form, Input, Button, Checkbox, App, Space } from 'antd'
 
 export default function Demo() {
+  const { message, modal, notification } = App.useApp()
   const onFinish = values => {
     console.log('Success:', values)
   }
@@ -32,9 +33,22 @@ export default function Demo() {
       </Form.Item>
 
       <Form.Item label={null}>
-        <Button type='primary' htmlType='submit'>
-          Submit
-        </Button>
+        <Space>
+          <Button onClick={() => message.success('message success')}>message</Button>
+          <Button onClick={() => modal.success({ title: 'message success', description: 'desc' })}>modal</Button>
+          <Button onClick={() => notification.success({ message: 'notification success', description: 'desc' })}>
+            notification
+          </Button>
+        </Space>
+      </Form.Item>
+
+      <Form.Item label={null}>
+        <Space>
+          <Button type='primary' htmlType='submit'>
+            Submit
+          </Button>
+          <Button htmlType='reset'>Reset</Button>
+        </Space>
       </Form.Item>
     </Form>
   )

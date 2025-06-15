@@ -1,5 +1,5 @@
-import { Form } from '@ant-design/compatible'
-import '@ant-design/compatible/assets/index.css'
+import { Form } from 'antd3/index'
+import 'antd3/index.css'
 import { Input, Select, Checkbox, Button, Space } from 'antd4'
 
 function Antd3DemoForm(props) {

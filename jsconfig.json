@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".", // 设置基准路径
+    "paths": {
+      "@/*": ["src/*"], // 配置路径别名
+      "antd3/*": ["lib/antd3/*"]
+    }
+  },
+  "include": ["src", "lib"] // 包含的文件夹
+}
