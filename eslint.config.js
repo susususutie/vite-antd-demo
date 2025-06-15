@@ -29,6 +29,7 @@ export default [
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
       'no-unused-vars': ['error', { varsIgnorePattern: '^_' }],
+      'react/prop-types': 0
     },
   },
 ]
