@@ -7,6 +7,7 @@ import 'dayjs/locale/zh-cn' // for date-picker i18n
 import { useContext } from 'react'
 import { ThemeContext } from './stores/themeContext'
 import { StyleProvider, legacyLogicalPropertiesTransformer } from '@ant-design/cssinjs'
+import "antd4/dist/antd.variable.css"
 
 function App() {
   const { prefixCls, iconPrefixCls, ...token } = useContext(ThemeContext).value

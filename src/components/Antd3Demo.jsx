@@ -27,7 +27,13 @@ function Antd3DemoForm(props) {
       </Form.Item>
       <Form.Item label=' ' colon={false}>
         <Space>
-          <Button type='primary' htmlType='submit'>
+          <Button type='primary' htmlType='submit' onClick={() => {
+            form.validateFields((err, values) => {
+              if (!err) {
+                console.log('Received values of form: ', values)
+              }
+            })
+          }}>
             Submit
           </Button>
           <Button htmlType='button'>Reset</Button>

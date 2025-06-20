@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
-import Table, { type TableProps } from '../../components/Table'
+import Table from '../../components/Table'
 
-const columns: TableProps['columns'] = [
+const columns = [
   {
     key: 'name',
     title: '名称',
@@ -15,10 +15,10 @@ const columns: TableProps['columns'] = [
   {
     key: 'action',
     title: '操作',
-    render: (text, record) => <Link to={`./detail/${record.id}`}>查看</Link>,
+    render: (text, record) => <Link to={`../detail/${record.id}`}>查看</Link>,
   },
 ]
-const dataSource: TableProps['dataSource'] = [
+const dataSource = [
   { id: 1, name: 'Demo1' },
   { id: 2, name: 'Demo1' },
   { id: 3, name: 'Demo1' },
